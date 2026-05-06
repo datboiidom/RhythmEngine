@@ -100,3 +100,70 @@ loadButtons.forEach(btn => btn.addEventListener('click', () => alert("Demo")));
 
 const buyButtons = document.querySelectorAll('.buy-btn');
 buyButtons.forEach(btn => btn.addEventListener('click', () => alert("In Demo")));
+
+
+// SEQUENCER SETUP
+const sequenceSteps = 8; // number of steps
+const drumInstruments = ["Kick", "Snare", "Hi-Hat", "Crash"];
+
+// Example: each row has 8 steps (false = off, true = active)
+let sequencerGrid = [
+    [true, false, false, false, true, false, false, false], // Kick
+    [false, false, true, false, false, false, true, false], // Snare
+    [false, true, false, true, false, true, false, true], // Hi-Hat
+    [false, false, false, true, false, false, false, true] // Crash
+];
+
+let currentStep = 0;
+let sequencerInterval = null;
+
+
+// START / STOP SEQUENCER
+function startSequencer() {
+    if(sequencerInterval) clearInterval(sequencerInterval); // reset if already running
+
+    const bpm = parseInt(bpmSlider.value) || 60; // default 60 if 0
+    const interval = (60 / bpm) * 1000; // time per beat in ms
+
+    sequencerInterval = setInterval(() => {
+        // play active instruments on current step
+        for(let i=0; i<drumInstruments.length; i++){
+            if(sequencerGrid[i][currentStep]){
+                playSound(drumInstruments[i]);
+            }
+        }
+
+        // move to next step
+        currentStep = (currentStep + 1) % sequenceSteps;
+
+        // update visual step indicator
+        const steps = document.querySelectorAll('.pattern-grid .step');
+        steps.forEach((step, index) => {
+            step.classList.toggle('active', index === currentStep);
+        });
+
+    }, interval);
+}
+
+function stopSequencer() {
+    if(sequencerInterval) clearInterval(sequencerInterval);
+}
+
+
+// CONNECT PLAY / PAUSE TO SEQUENCER
+document.querySelector('.play-btn').addEventListener('click', () => {
+    startSequencer();
+    isPlaying = true;
+});
+document.querySelector('.pause-btn').addEventListener('click', () => {
+    stopSequencer();
+    isPlaying = false;
+});
+
+
+// UPDATE INTERVAL WHEN BPM CHANGES
+bpmSlider.addEventListener('input', () => {
+    bpmDisplay.textContent = bpmSlider.value;
+    if(isPlaying) startSequencer(); // restart sequencer with new BPM
+});
+
