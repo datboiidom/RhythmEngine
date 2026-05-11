@@ -167,3 +167,13 @@ bpmSlider.addEventListener('input', () => {
     if(isPlaying) startSequencer(); // restart sequencer with new BPM
 });
 
+const reopenPanelBtn = document.getElementById('reopen-panel-btn');
+
+reopenPanelBtn.addEventListener('click', () => {
+    if (!panelOpen) { // only open if currently closed
+        beatsPanel.style.width = '250px';
+        togglePanelBtn.textContent = '←';
+        panelOpen = true;
+    }
+});
+
