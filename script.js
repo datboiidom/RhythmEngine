@@ -77,23 +77,6 @@ bpmSlider.addEventListener('input', () => {
     console.log("BPM set to: " + bpmSlider.value);
 });
 
-// ======== BEAT LIBRARY TOGGLE ========
-const togglePanelBtn = document.querySelector('.toggle-panel');
-const beatsPanel = document.querySelector('.beats-panel');
-let panelOpen = true;
-
-togglePanelBtn.addEventListener('click', () => {
-    if(panelOpen) {
-        beatsPanel.style.width = '0';
-        togglePanelBtn.textContent = '→';
-        panelOpen = false;
-    } else {
-        beatsPanel.style.width = '250px';
-        togglePanelBtn.textContent = '←';
-        panelOpen = true;
-    }
-});
-
 // ======== DEMO BUTTONS ========
 const loadButtons = document.querySelectorAll('.load-btn');
 loadButtons.forEach(btn => btn.addEventListener('click', () => alert("Demo")));
