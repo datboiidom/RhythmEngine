@@ -8,159 +8,159 @@
 </head>
 <body>
     <div class="studio-container">
-
-        <!-- HEADER / CONTROL PANEL -->
-        <header class="control-panel">
-            <div class="logo">
-                <h1>RhythmEngine</h1>
-                <div class="status-indicator"></div>
-            </div>
+ 
+<!-- HEADER / CONTROL PANEL -->
+<header class="control-panel">
+    <div class="logo">
+        <h1>RhythmEngine</h1>
+         <div class="status-indicator"></div>
+    </div>
             
-            <div class="main-controls">
-                <button class="control-btn play-btn"><span class="icon">▶</span><span>Play</span></button>
-                <button class="control-btn pause-btn"><span class="icon">⏸</span><span>Pause</span></button>
-                <button class="control-btn record-btn"><span class="icon">●</span><span>Record</span></button>
-                <button class="control-btn save-btn"><span class="icon">💾</span><span>Save</span></button>
-            </div>
+<div class="main-controls">
+    <button class="control-btn play-btn"><span class="icon">▶</span><span>Play</span></button>
+     <button class="control-btn pause-btn"><span class="icon">⏸</span><span>Pause</span></button>
+     <button class="control-btn record-btn"><span class="icon">●</span><span>Record</span></button>
+     <button class="control-btn save-btn"><span class="icon">💾</span><span>Save</span></button>
+ </div>
 
-            <div class="bpm-control">
-                <label>BPM</label>
-                <div class="bpm-wheel-container">
-                    <input type="range" class="bpm-wheel" min="0" max="120" value="0">
-                    <div class="bpm-display">0</div>
-                </div>
-            </div>
-        </header>
+<div class="bpm-control">
+    <label>BPM</label>
+<div class="bpm-wheel-container">
+     <input type="range" class="bpm-wheel" min="0" max="120" value="0">
+ <div class="bpm-display">0</div>
+</div>
+</div>
+</header>
 
-        <!-- MAIN WORKSPACE -->
-        <div class="main-workspace">
+<!-- MAIN WORKSPACE -->
+<div class="main-workspace">
 
-            <!-- BEAT LIBRARY -->
-            <aside class="beats-panel">
-                <div class="panel-header">
-                    <h3>Beat Library</h3>
-                </div>
-                <div class="beats-list">
+ <!-- BEAT LIBRARY -->
+ <aside class="beats-panel">
+    <div class="panel-header">
+      <h3>Beat Library</h3>
+    </div>
+<div class="beats-list">
                     
 
-                    <!-- Free Collection -->
-                    <div class="beat-category">
-                        <h4>Free Collection</h4>
-                        <div class="beat-item">
-                            <div class="beat-info"><span class="beat-name">Classic Rock</span><span class="beat-bpm">120 BPM</span></div>
-                            <button class="load-btn">Load</button>
-                        </div>
-                        <div class="beat-item">
-                            <div class="beat-info"><span class="beat-name">Hip Hop Base</span><span class="beat-bpm">95 BPM</span></div>
-                            <button class="load-btn">Load</button>
-                        </div>
-                        <div class="beat-item">
-                            <div class="beat-info"><span class="beat-name">Jazz Swing</span><span class="beat-bpm">140 BPM</span></div>
-                            <button class="load-btn">Load</button>
-                        </div>
-                    </div>
+<!-- Free Collection -->
+<div class="beat-category">
+    <h4>Free Collection</h4>
+<div class="beat-item">
+<div class="beat-info"><span class="beat-name">Classic Rock</span><span class="beat-bpm">120 BPM</span></div>
+    <button class="load-btn">Load</button>
+</div>
+<div class="beat-item">
+    <div class="beat-info"><span class="beat-name">Hip Hop Base</span><span class="beat-bpm">95 BPM</span></div>
+        <button class="load-btn">Load</button>
+</div>
+<div class="beat-item">
+<di class="beat-info"><span class="beat-name">Jazz Swing</span><span class="beat-bpm">140 BPM</span></div>
+    <button class="load-btn">Load</button>
+</div>
+</div>
+    
+<!-- Premium Collection -->
+<div class="beat-category">
+    <h4>Premium Collection</h4>
+<div class="beat-item premium">
+<div class="beat-info"><span class="beat-name">Studio Pro Pack</span><span class="beat-bpm">Various BPM</span></div>
+    <button class="buy-btn">$2.99</button>
+</div>
+ <div class="beat-item premium">
+<div class="beat-info"><span class="beat-name">Electronic Vibes</span><span class="beat-bpm">128 BPM</span></div>
+    <button class="buy-btn">$1.99</button>
+</div>
+</div>
 
-                    <!-- Premium Collection -->
-                    <div class="beat-category">
-                        <h4>Premium Collection</h4>
-                        <div class="beat-item premium">
-                            <div class="beat-info"><span class="beat-name">Studio Pro Pack</span><span class="beat-bpm">Various BPM</span></div>
-                            <button class="buy-btn">$2.99</button>
-                        </div>
-                        <div class="beat-item premium">
-                            <div class="beat-info"><span class="beat-name">Electronic Vibes</span><span class="beat-bpm">128 BPM</span></div>
-                            <button class="buy-btn">$1.99</button>
-                        </div>
-                    </div>
+</div>
+</aside>
 
-                </div>
-            </aside>
+<!-- BEAT MAKER -->
+ <main class="beat-maker">
 
-            <!-- BEAT MAKER -->
-            <main class="beat-maker">
+<!-- SEQUENCE DISPLAY -->
+<div class="sequence-display">
+<div class="sequence-header">
+    <h3>Beat Sequence</h3>
+<div class="sequence-controls"><span class="step-counter">Step 1/8</span></div>
+ </div>
+<div class="pattern-grid">
+      <div class="step active"></div>
+      <div class="step"></div>
+     <div class="step"></div>
+     <div class="step"></div>
+     <div class="step"></div>
+     <div class="step"></div>
+     <div class="step"></div>
+    <div class="step"></div>
+</div>
+    </div>
 
-                <!-- SEQUENCE DISPLAY -->
-                <div class="sequence-display">
-                    <div class="sequence-header">
-                        <h3>Beat Sequence</h3>
-                        <div class="sequence-controls"><span class="step-counter">Step 1/8</span></div>
-                    </div>
-                    <div class="pattern-grid">
-                        <div class="step active"></div>
-                        <div class="step"></div>
-                        <div class="step"></div>
-                        <div class="step"></div>
-                        <div class="step"></div>
-                        <div class="step"></div>
-                        <div class="step"></div>
-                        <div class="step"></div>
-                    </div>
-                </div>
+ <!-- INSTRUMENT GRID -->
+<div class="instrument-grid">
 
-                <!-- INSTRUMENT GRID -->
-                <div class="instrument-grid">
+ <!-- DRUMS -->
+ <div class="instrument-section drums">
+ <div class="section-header">
+    <h4>Drums</h4>
+ </div>
+<div class="instrument-buttons">
+    <button class="instrument-btn" id="kick-btn">Kick</button>
+    <button class="instrument-btn">Snare</button>
+    <button class="instrument-btn">Hi-Hat</button>
+    <button class="instrument-btn">Crash</button>
+</div>
+    </div>
 
-                    <!-- DRUMS -->
-                    <div class="instrument-section drums">
-                        <div class="section-header">
-                            <h4>Drums</h4>
-                        </div>
-                        <div class="instrument-buttons">
-                            <button class="instrument-btn" id="kick-btn">Kick</button>
-                            <button class="instrument-btn">Snare</button>
-                            <button class="instrument-btn">Hi-Hat</button>
-                            <button class="instrument-btn">Crash</button>
-                        </div>
-                    </div>
+<!-- BASS -->
+<div class="instrument-section bass">
+    <div class="section-header"><h4>Bass</h4></div>
+        <div class="instrument-buttons">
+        <button class="instrument-btn">Low E</button>
+        <button class="instrument-btn">A</button>
+        <button class="instrument-btn">D</button>
+        <button class="instrument-btn">G</button>
+</div>
+    </div>
 
-                    <!-- BASS -->
-                    <div class="instrument-section bass">
-                        <div class="section-header"><h4>Bass</h4></div>
-                        <div class="instrument-buttons">
-                            <button class="instrument-btn">Low E</button>
-                            <button class="instrument-btn">A</button>
-                            <button class="instrument-btn">D</button>
-                            <button class="instrument-btn">G</button>
-                        </div>
-                    </div>
+<!-- PIANO -->
+<div class="instrument-section piano">
+    <div class="section-header"><h4>Piano</h4></div>
+     <div class="instrument-buttons">
+        <button class="instrument-btn">C</button>
+        <button class="instrument-btn">D Note</button>
+        <button class="instrument-btn">E</button>
+        <button class="instrument-btn">F</button>
+</div>
+    </div>
 
-                    <!-- PIANO -->
-                    <div class="instrument-section piano">
-                        <div class="section-header"><h4>Piano</h4></div>
-                        <div class="instrument-buttons">
-                            <button class="instrument-btn">C</button>
-                            <button class="instrument-btn">D Note</button>
-                            <button class="instrument-btn">E</button>
-                            <button class="instrument-btn">F</button>
-                        </div>
-                    </div>
+ <!-- GUITAR -->
+<div class="instrument-section guitar">
+     <div class="section-header"><h4>Guitar</h4></div>
+        <div class="instrument-buttons">
+            <button class="instrument-btn">E Chord</button>
+            <button class="instrument-btn">A Chord</button>
+            <button class="instrument-btn">D Chord</button>
+            <button class="instrument-btn">G Chord</button>
+</div>
+     </div>
 
-                    <!-- GUITAR -->
-                    <div class="instrument-section guitar">
-                        <div class="section-header"><h4>Guitar</h4></div>
-                        <div class="instrument-buttons">
-                            <button class="instrument-btn">E Chord</button>
-                            <button class="instrument-btn">A Chord</button>
-                            <button class="instrument-btn">D Chord</button>
-                            <button class="instrument-btn">G Chord</button>
-                        </div>
-                    </div>
-
-                    <!-- TRUMPET -->
-                    <div class="instrument-section trumpet">
-                        <div class="section-header"><h4>Trumpet</h4></div>
-                        <div class="instrument-buttons">
-                            <button class="instrument-btn">C Note</button>
-                            <button class="instrument-btn">D Note Trumpet</button>
-                            <button class="instrument-btn">E Note</button>
-                            <button class="instrument-btn">F Note</button>
-                        </div>
-                    </div>
-
-                </div>
-            </main>
+<!-- TRUMPET -->
+<div class="instrument-section trumpet">
+    <div class="section-header"><h4>Trumpet</h4></div>
+        <div class="instrument-buttons">
+            <button class="instrument-btn">C Note</button>
+            <button class="instrument-btn">D Note Trumpet</button>
+            <button class="instrument-btn">E Note</button>
+            <button class="instrument-btn">F Note</button>
+</div>
+    </div>
 
         </div>
+</main>
+
+</div>
     </div>
 
     <!-- AUDIO ELEMENTS -->
